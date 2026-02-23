@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ilha Kayaking</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}?v=2">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-navbar">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <!-- Logo + Brand -->
+            <div class="d-flex align-items-center">
+                <img src="{% static 'images/favicon.ico' %}" 
+                    alt="Ilha Logo"
+                    class="navbar-logo me-2">
+                <a class="navbar-brand mb-0" href="#">
+                    Ilha Kayaking
+                </a>
+            </div>
+
+            <!-- Button -->
+            <div>
+                <a href="https://wa.me/918891666118" target="_blank"
+                class="btn btn-success book-btn">
+                Book Now
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    {% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer-section text-white text-center py-4">
+        <div class="container">
+
+            <p class="mb-3">© 2026 Ilha Kayaking | All Rights Reserved</p>
+
+            <div class="footer-social-icons">
+                <a href="https://instagram.com/ilha_kayaking" target="_blank" class="social-icon instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com/yourpage" target="_blank" class="social-icon facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="https://wa.me/918891666118" target="_blank" class="social-icon whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+                <a href="https://maps.app.goo.gl/rm1htL4QUG3CHMfY6" target="_blank" class="social-icon maps">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn">
+        ↑
+    </button>
+
+    <a href="https://wa.me/918891666118" 
+        class="btn btn-success rounded-circle whatsapp-btn"
+        style="position:fixed; bottom:20px; right:20px; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:24px;">
+        💬
+    </a>
+    
+
+    
+
+    <!-- FEEDBACK MODAL -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content feedback-modal">
+
+        <div class="modal-header border-0">
+            <h4 class="modal-title">Feedback Form</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Your Name</label>
+                    {{ form.name }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Rating</label>
+                    {{ form.rating }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Your Experience</label>
+                    {{ form.review }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Upload Image (Optional)</label>
+                    {{ form.image }}
+                </div>
+
+                <button type="submit" class="modal-submit-btn">
+                    Submit
+                </button>
+            </form>
+
+
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        });
+
+        scrollTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

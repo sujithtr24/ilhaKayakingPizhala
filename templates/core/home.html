@@ -1,0 +1,332 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Premium Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content text-center">
+        <h1 class="hero-title">Reconnect with Nature</h1>
+
+        <p class="hero-subtitle">
+            Reconnect with nature on our carefully curated 2-hour kayaking tours.
+            Paddle through tranquil waters, open skies, and lush island views while
+            enjoying a peaceful escape from everyday life.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="https://wa.me/918891666118" class="btn btn-primary btn-lg px-4">Book Now</a>
+            <a href="#" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Welcome Section -->
+<section class="welcome-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Text Column -->
+            <div class="col-lg-6 welcome-text">
+                <p class="welcome-subtitle">WELCOME TO</p>
+                <h2 class="welcome-title">
+                    ILHA <span>KAYAKING</span>
+                </h2>
+
+                <p class="welcome-description">
+                    Enjoy a peaceful kayaking experience through the scenic
+                    backwaters around Murikkal Island and West Pizhala.
+                    Our tours offer a unique opportunity to explore the
+                    serene beauty of Kerala's backwaters while creating
+                    lasting memories.
+                </p>
+
+                <p class="welcome-description">
+                    Whether you're a beginner or an experienced paddler,
+                    our expert guides ensure a safe and enjoyable journey
+                    through tranquil waters where you can witness stunning sunsets.
+                </p>
+
+                <a href="#" class="btn btn-primary welcome-btn">
+                    Book Your Tour
+                </a>
+            </div>
+
+            <!-- Image Column -->
+            <div class="col-lg-6 text-center welcome-image">
+                <div class="welcome-img-wrapper">
+                    <img src="{% static 'images/gallery10.jpeg' %}"
+                        class="img-fluid rounded-4 shadow-lg">
+                    <div class="welcome-img-gradient"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Tour Details Section -->
+<section class="tour-section py-5">
+    <div class="container text-center">
+
+        <p class="tour-subtitle">PLAN YOUR ADVENTURE</p>
+        <h2 class="tour-title mb-5">Tour Details</h2>
+
+        <div class="row justify-content-center g-4">
+
+            <!-- Time Slots -->
+            <div class="col-lg-3 col-md-6">
+                <div class="tour-card">
+                    <div class="tour-icon">🗓️</div>
+                    <h5>Time Slots</h5>
+                    <p>Morning: 6:00 AM – 11:00 AM</p>
+                    <p>Evening: 3:00 PM – 7:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Duration -->
+            <div class="col-lg-3 col-md-6">
+                <div class="tour-card">
+                    <div class="tour-icon">⏰</div>
+                    <h5>Duration</h5>
+                    <p>2 Hours</p>
+                </div>
+            </div>
+
+            <!-- Includes -->
+            <div class="col-lg-3 col-md-6">
+                <div class="tour-card">
+                    <div class="tour-icon">☕</div>
+                    <h5>Includes</h5>
+                    <p>Complimentary drink & snack</p>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="col-lg-3 col-md-6">
+                <div class="tour-card">
+                    <div class="tour-icon">📍</div>
+                    <h5>Location</h5>
+                    <p>Pizhala (near Kadamakudy)</p>
+                    <a href="https://maps.app.goo.gl/rm1htL4QUG3CHMfY6"
+                       target="_blank"
+                       class="location-link mt-2 d-inline-block">
+                        View on Google Maps →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- What We Offer Section -->
+<section class="offer-section py-5">
+    <div class="container text-center">
+
+        <p class="offer-subtitle">WHY CHOOSE US</p>
+        <h2 class="offer-title mb-5">What We Offer</h2>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="offer-card">
+                    <div class="offer-icon">🧭</div>
+                    <h5>Guided Experience</h5>
+                    <p>Expert guides lead you through scenic routes</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="offer-card">
+                    <div class="offer-icon">☕</div>
+                    <h5>Refreshments Included</h5>
+                    <p>Complimentary drinks and snacks on every trip</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="offer-card">
+                    <div class="offer-icon">🛡️</div>
+                    <h5>Safety First</h5>
+                    <p>Quality life jackets and safety equipment provided</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="offer-card">
+                    <div class="offer-icon">⚓</div>
+                    <h5>Quality Kayaks</h5>
+                    <p>Well-maintained and comfortable kayaks</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="offer-card">
+                    <div class="offer-icon">📷</div>
+                    <h5>Photo Opportunities</h5>
+                    <p>Stunning backwater views perfect for memories</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="offer-card">
+                    <div class="offer-icon">👥</div>
+                    <h5>All Skill Levels</h5>
+                    <p>Perfect for beginners and experienced paddlers</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section py-5">
+    <div class="container text-center">
+
+        <h2 class="pricing-title mb-5">Pricing</h2>
+
+        <div class="pricing-wrapper">
+
+            <div class="pricing-card">
+
+                <!-- Top Orange Header -->
+                <div class="pricing-header">
+                    <h4>Standard Tour</h4>
+                    <h1>₹600 <span>/person</span></h1>
+                </div>
+
+                <!-- Pricing Body -->
+                <div class="pricing-body">
+
+                    <ul class="pricing-list">
+                        <li>✔ 2-hour kayaking experience</li>
+                        <li>✔ Professional guide</li>
+                        <li>✔ Safety equipment included</li>
+                        <li>✔ Complimentary drink & snack</li>
+                        <li>✔ Scenic backwater routes</li>
+                        <li>✔ Sunset/sunrise views</li>
+                    </ul>
+
+                    <div class="discount-box">
+                        🎉 Group discounts available!
+                        <br>
+                        <small>Contact us for special rates</small>
+                    </div>
+
+                    <a href="https://wa.me/918891666118" class="pricing-btn">
+                        Book Your Tour Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Gallery Carousel -->
+<section class="gallery-section p-5">
+    <div class="container text-center">
+
+        <h2 class="section-title mb-5">Gallery</h2>
+
+        <div id="kayakCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-4 shadow-lg">
+
+                <div class="carousel-item active">
+                    <img src="{% static 'images/gallery2.jpeg' %}"
+                         class="d-block w-100 carousel-img"
+                         alt="Kayaking View 1">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/gallery7.jpeg' %}"
+                         class="d-block w-100 carousel-img"
+                         alt="Kayaking View 2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/gallery9.jpeg' %}"
+                         class="d-block w-100 carousel-img"
+                         alt="Kayaking View 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/gallery12.jpeg' %}"
+                         class="d-block w-100 carousel-img"
+                         alt="Kayaking View 3">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#kayakCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#kayakCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!--
+ TESTIMONIAL SECTION 
+<section class="testimonial-section">
+    <div class="container text-center">
+
+        <h2 class="section-title mb-5">What Our Customers Say</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            {% for testimonial in testimonials %}
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <h5>{{ testimonial.name }}</h5>
+
+                    <div class="stars">
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= testimonial.rating %}
+                                ⭐
+                            {% else %}
+                                ☆
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <p>"{{ testimonial.review }}"</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+         Submit Button 
+        <div class="mt-5">
+            <button class="btn btn-primary btn-lg px-4 premium-btn" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                Submit Your Feedback
+            </button>
+        </div>
+
+    </div>
+</section>
+
+-->
+
+
+
+
+{% endblock %}

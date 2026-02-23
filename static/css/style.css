@@ -1,0 +1,442 @@
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+body {
+    padding-top: 80px;
+}
+
+.custom-navbar {
+    transition: 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* Navbar */
+.navbar-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.book-btn {
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url("../images/kayak.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(49,46,46,0.6));
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    margin: 10px;
+    border-radius: 40px;
+    transition: 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+    background-color: #f4a261;
+    border: none;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #e76f51;
+    transform: translateY(-3px);
+}
+
+.hero-buttons .btn-outline-light:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-3px);
+}
+
+
+/* ========================= */
+/* WELCOME SECTION */
+/* ========================= */
+
+.welcome-section {
+    background-color: #f8f6f2;
+    overflow: hidden;
+}
+
+.welcome-subtitle {
+    color: #f4a261;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.welcome-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.welcome-title span {
+    color: #f4a261;
+}
+
+.welcome-description {
+    color: #555;
+    line-height: 1.8;
+}
+
+.welcome-btn {
+    margin-top: 15px;
+    padding: 12px 30px;
+    border-radius: 40px;
+    background-color: #f4a261;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.welcome-btn:hover {
+    background-color: #e76f51;
+    transform: translateY(-3px);
+}
+
+.welcome-text {
+    animation: fadeLeft 1s ease forwards;
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-image {
+    animation: fadeRight 1s ease forwards;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.welcome-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.welcome-img-wrapper img {
+    width: 100%;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.welcome-img-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.welcome-img-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(244,162,97,0.35),
+        rgba(0,0,0,0.1)
+    );
+    pointer-events: none;
+}
+
+
+/* ========================= */
+/* TOUR SECTION */
+/* ========================= */
+
+.tour-section {
+    background-color: #f3f3f3;
+}
+
+.tour-subtitle {
+    color: #f4a261;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.tour-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.tour-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.tour-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.location-link {
+    color: #f4a261;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.location-link:hover {
+    color: #e76f51;
+    letter-spacing: 1px;
+}
+
+
+/* ========================= */
+/* OFFER SECTION */
+/* ========================= */
+
+.offer-section {
+    background-color: #2f6f73;
+    color: white;
+}
+
+.offer-subtitle {
+    color: #f4a261;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.offer-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.offer-card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s ease;
+    height: 100%;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.offer-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    background-color: #f4a261;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: 0.3s ease;
+}
+
+.offer-card:hover .offer-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+
+/* ========================= */
+/* PRICING */
+/* ========================= */
+
+.pricing-section {
+    background-color: #f8f6f2;
+}
+
+.pricing-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card {
+    max-width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: fadeUp 1s ease forwards,
+               floatCard 6s ease-in-out infinite 1s;
+}
+
+.pricing-header {
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    color: white;
+    padding: 40px 20px;
+}
+
+.pricing-body {
+    background: white;
+    padding: 30px;
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 40px;
+    background-color: #f4a261;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.pricing-btn:hover {
+    background-color: #e76f51;
+    transform: translateY(-3px);
+}
+
+
+/* ========================= */
+/* SCROLL BUTTON */
+/* ========================= */
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #f4a261;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.scroll-top-btn:hover {
+    background: #e76f51;
+    transform: translateY(-5px);
+}
+
+/* ========================= */
+/* Gallery */
+/* ========================= */
+
+/* Force carousel item to auto height */
+#kayakCarousel .carousel-item {
+    text-align: center;      /* center image horizontally */
+}
+
+/* Remove forced stretching */
+#kayakCarousel .carousel-item img {
+    max-height: 75vh;        /* control visual height */
+    width: auto;             /* keep natural ratio */
+    max-width: 100%;         /* responsive */
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slowZoom {
+    from { background-size: 100%; }
+    to { background-size: 110%; }
+}
+
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
